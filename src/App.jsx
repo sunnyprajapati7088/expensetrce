@@ -17,7 +17,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Navbar />}>
           <Route path="/form" element={<Form />}></Route>
-           <Route path="/" element={ <ShowallExpense /> }></Route>
+          <Route path="/" element={<ShowallExpense />}></Route>
+          
         </Route>
       </Routes>
     </div>
