@@ -110,7 +110,7 @@ function Form() {
           Submit
         </button>
       </div>
-      <ShowallExpense val={seta} />
+     
     </div>
   );
 }

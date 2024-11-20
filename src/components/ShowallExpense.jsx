@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-function ShowallExpense({ val }) {
-    val("sunny");
+function ShowallExpense( ) {
+   
     
   const [data, setData] = useState(
     JSON.parse(localStorage.getItem("data")) || []

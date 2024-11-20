@@ -8,10 +8,18 @@ export default function Inputs() {
   )
 }
 
-export default function TextFeild() {
+export  function TextFeild() {
   return (
     <div>
-      hello
+      <input
+        required
+        className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        placeholder=""
+        name="price"
+     
+    
+       
+      />
     </div>
-  )
+  );
 }
