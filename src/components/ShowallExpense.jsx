@@ -1,8 +1,7 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-function ShowallExpense( ) {
-   
-    
+function ShowallExpense() {
   const [data, setData] = useState(
     JSON.parse(localStorage.getItem("data")) || []
   );
@@ -27,7 +26,8 @@ function ShowallExpense( ) {
               <th className="py-2 px-4 text-left">Category</th>
               <th className="py-2 px-4 text-left">Price</th>
               <th className="py-2 px-4 text-left">Date</th>
-              <th className="py-2 px-4 text-left">Action</th>
+              <th className="py-2 px-4 text-left">DeleteAction</th>
+              <th className="py-2 px-4 text-left">UpdateAction</th>
             </tr>
           </thead>
           <tbody>
@@ -47,6 +47,14 @@ function ShowallExpense( ) {
                   >
                     Delete
                   </button>
+                </td>
+                <td className="py-2 px-4">
+                  <Link
+                    to={`/Edit/${i}`}
+                    className="bg-green-500 text-white px-3 py-1 rounded-md hover:bg-green-600 transition"
+                  >
+                    Edit
+                  </Link>
                 </td>
               </tr>
             ))}

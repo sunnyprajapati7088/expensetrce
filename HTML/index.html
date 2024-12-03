@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+
+<body>
+    <div id="val">0</div>
+    <div id="element"></div>
+    <button id="inc">Increment</button>
+    <script>
+        // let value = 0;
+        // const element=document.createElement("h1",id="element","hiiiiii")
+        // const app=document.getElementById('element');
+        // app.appendChild(element)
+        // document.getElementById('inc').addEventListener("click", () => {
+        //     value += 1; // Increment the value
+        //     document.getElementById('val').textContent = value; // Update the display
+        // });
+        // const arr=[6,6,6,4,4,9];
+        const arr1=['a','b','b','c','a'];
+        const arr=[
+            {name:"Apple",category:"Fruit"},
+            {name:"Apple",category:"Fruit"},
+            {name:"Apple",category:"Fruit"}
+        ]
+        const reducer=(acc,product)=>{
+        const {category,name}=product;    
+            acc[category]=acc[category]||[];
+            acc[category].push(name);
+            
+            return acc;
+        }
+        const reducerword=(acc,word)=>{
+            if(!acc[word])acc[word]=0;
+            acc[word]++;
+            return acc;
+
+        }
+        const result=arr.reduce(reducer,{});
+        console.log(result)
+        console.log(arr1.reduce(reducerword,{  }))
+    </script>
+</body>
+
+</html>

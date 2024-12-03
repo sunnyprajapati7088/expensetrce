@@ -9,13 +9,13 @@ function Navbar() {
           <h1 className="text-2xl font-bold">Expense Tracker</h1>
           <div className="flex space-x-6">
             <NavLink
-              to="/"
+              to="/ExpensesList"
               className="hover:text-gray-300 transition-colors duration-300"
             >
               All Expense
             </NavLink>
             <Link
-              to="/form"
+              to="/AddExpense"
               className="hover:text-gray-300 transition-colors duration-300"
             >
               Add Expense
