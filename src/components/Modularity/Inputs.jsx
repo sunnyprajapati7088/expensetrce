@@ -8,7 +8,7 @@ export default function Inputs() {
   )
 }
 
-export  function TextFeild() {
+export  function TextFeild({value,form,setvalue}) {
   return (
     <div>
       <input
@@ -16,7 +16,7 @@ export  function TextFeild() {
         className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         placeholder=""
         name="price"
-     
+        onChange={(e) => setvalue(e.target.value)}
     
        
       />

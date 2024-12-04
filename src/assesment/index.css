@@ -1,0 +1,56 @@
+.circle-container {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddd;
+  overflow: hidden;
+}
+
+.circle-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.error-icon {
+  color: red;
+}
+
+.large-error-icon {
+  font-size: 48px;
+  color: red;
+}
+
+.component-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 50px;
+  background-color: #112233;
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+}
+
+.image-row {
+  display: flex;
+padding: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+  gap: 10px;
+}
+
+.text-content {
+  margin-left: 20px;
+}

@@ -1,21 +1,26 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+  import "react-toastify/dist/ReactToastify.css";
 import ShowallExpense from "./ShowallExpense";
+import { useNavigate } from "react-router-dom";
 
 function Form() {
-  const [form, setForm] = useState({
-    title: "",
-    price: "",
-    category: "",
-    date: "",
-  });
+    const navigate = useNavigate();
+ const [form, setForm] = useState({
+   title: "",
+   price: "",
+   category: "",
+   date: "",
+ });
+ const handleChange = (e) => {
+   const { name, value } = e.target;
+   setForm({ ...form, [name]: value });
+ };
+  console.log(form)
+ 
+
     const [a, seta] = useState("");
     console.log(a)
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setForm({ ...form, [name]: value });
-  };
 
   const handleSubmit = () => {
     if (!form.title || !form.price || !form.category || !form.date) {
@@ -36,7 +41,8 @@ function Form() {
       });
 
       // Show success toast message
-      toast.success("Expense added successfully!");
+        toast.success("Expense added successfully!");
+      navigate("/")
     } catch (error) {
       console.log(error);
       toast.error("An error occurred while submitting the form.");

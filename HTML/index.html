@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+
+<body>
+    <div id="val">0</div>
+    <div id="element"></div>
+    <button id="inc">Increment</button>
+    <script>
+        let value = 0;
+        const element=document.createElement("h1",id="element","hiiiiii")
+        const app=document.getElementById('element');
+        app.appendChild(element)
+        document.getElementById('inc').addEventListener("click", () => {
+            value += 1; // Increment the value
+            document.getElementById('val').textContent = value; // Update the display
+        });
+    </script>
+</body>
+
+</html>
