@@ -1,18 +1,32 @@
 import React from "react";
 export const DateInput = ({ value,name, onchange }) => {
-    return (<div>
-            <label >Data:</label>
-        <input type="Date" value={value} name={name} onChange={(e)=>onchange(e)}></input>
-    </div>);
+    return (
+      <div>
+        <label>Data:</label>
+        <input
+          type="Date"
+          value={value}
+          name={name}
+          onChange={(e) => onchange(e)}
+          required
+        ></input>
+      </div>
+    );
 };
 
 export const TitleInput = ({ value,name,onchange }) => {
     return (
-        <div>
-            <lable>Title:</lable>
-            <input type="text" name={name} required value={value} onChange={(e)=>onchange(e)}></input>
-        </div>
-    )
+      <div>
+        <lable>Title:</lable>
+        <input
+          type="text"
+          name={name}
+          value={value}
+          onChange={(e) => onchange(e)}
+          required
+        ></input>
+      </div>
+    );
 }
 
 
@@ -70,7 +84,7 @@ export const PaymentModeInput = ({ value, onchange,name }) => {
     <div>
       <lable>paymentMode:</lable>
 
-      <select name={name} value={value} onChange={(e) => onchange(e)}>
+      <select name={name} value={value} onChange={(e) => onchange(e)} >
         <option>select</option>
         <option>Cash</option>
         <option>Debit Card</option>

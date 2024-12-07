@@ -69,7 +69,7 @@ function ExpenseForm({
   const navigate = useNavigate();
   console.log(expenses);
   return (
-    <div className="container mx-auto p-6 bg-gray-50 shadow-md rounded-lg">
+    <form className="container mx-auto p-6 bg-gray-50 shadow-md rounded-lg">
       <h2 className="text-2xl font-bold text-gray-700 mb-4">
         {EditIndex > -1 ? "Edit Expense" : "Add Expense"}
       </h2>
@@ -105,7 +105,7 @@ function ExpenseForm({
           className="border border-gray-300 rounded p-2"
         />
       </div>
-      <button
+      <input type="submit"
         onClick={(e) => {
           handleSubmit(
             e,
@@ -118,11 +118,12 @@ function ExpenseForm({
           ),
             navigate("/ExpensesList");
         }}
+        value={EditIndex > -1 ? "Edit Expense" : "Add Expense"}
         className="mt-6 w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg"
-      >
-        {EditIndex > -1 ? "Edit Expense" : "Add Expense"}
-      </button>
-    </div>
+   />
+        
+   
+    </form>
   );
 }
 
