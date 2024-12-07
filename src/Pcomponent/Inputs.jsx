@@ -1,5 +1,6 @@
 import React from "react";
 export const DateInput = ({ value,name, onchange }) => {
+<<<<<<< HEAD
     return (
       <div>
         <label>Data:</label>
@@ -12,10 +13,17 @@ export const DateInput = ({ value,name, onchange }) => {
         ></input>
       </div>
     );
+=======
+    return (<div>
+            <label >Data:</label>
+        <input type="Date" value={value} name={name} onChange={(e)=>onchange(e)}></input>
+    </div>);
+>>>>>>> f8206b07906461c00961f91d66f676dfd985734d
 };
 
 export const TitleInput = ({ value,name,onchange }) => {
     return (
+<<<<<<< HEAD
       <div>
         <lable>Title:</lable>
         <input
@@ -27,6 +35,13 @@ export const TitleInput = ({ value,name,onchange }) => {
         ></input>
       </div>
     );
+=======
+        <div>
+            <lable>Title:</lable>
+            <input type="text" name={name} required value={value} onChange={(e)=>onchange(e)}></input>
+        </div>
+    )
+>>>>>>> f8206b07906461c00961f91d66f676dfd985734d
 }
 
 
@@ -84,7 +99,11 @@ export const PaymentModeInput = ({ value, onchange,name }) => {
     <div>
       <lable>paymentMode:</lable>
 
+<<<<<<< HEAD
       <select name={name} value={value} onChange={(e) => onchange(e)} >
+=======
+      <select name={name} value={value} onChange={(e) => onchange(e)}>
+>>>>>>> f8206b07906461c00961f91d66f676dfd985734d
         <option>select</option>
         <option>Cash</option>
         <option>Debit Card</option>
