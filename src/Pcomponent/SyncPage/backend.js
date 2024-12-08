@@ -58,15 +58,9 @@ export function deleteExpense(index, setExpenses,expenses) {
   let data = expenses;
   if (data.length > 1) {
     const updatedata = data.splice(index, 1);
-<<<<<<< HEAD
     setExpenses(updatedata)
     alert("expenses deleted successfully");
 
-=======
-      setExpenses(updatedata)
-    alert("expenses deleted successfully");
-  
->>>>>>> f8206b07906461c00961f91d66f676dfd985734d
     toast.success("Expense delete successfully!");
   } else {
     setExpense([])

@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import ExponaseList from '../ExponaseList'
 import { getData } from '../SyncPage/backend';
 
-function ExpenseListPage({ setForm, form, setEditIndex, expenses ,
-                setExpenses}) {
+function ExpenseListPage({ setForm, form, setEditIndex, expenses ,setFilter,
+                filterData,setExpenses}) {
 
 
   return (
@@ -14,6 +14,8 @@ function ExpenseListPage({ setForm, form, setEditIndex, expenses ,
         form={form}
         setEditIndex={setEditIndex}
         setExpenses={setExpenses}
+        filterData={filterData}
+        setFilter={setFilter}
       ></ExponaseList>
     </div>
   );
